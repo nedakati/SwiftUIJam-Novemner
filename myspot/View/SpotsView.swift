@@ -11,7 +11,7 @@ import CoreLocation
 struct SpotsView: View {
     
     let spots: [Spot] = [Spot(location: "Location", coordinates: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing"),
-                         Spot(location: "Location", coordinates: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing")]
+                         Spot(location: "Location", coordinates: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), number: "2", instuctions: "Nothing")]
     
     @State private var selectedSpot: Spot?
     @State private var presentDetailScreen = false
@@ -22,7 +22,6 @@ struct SpotsView: View {
                 ForEach(spots, id: \.id) { spot in
                     MySpotCard(spot: spot, onSelect: {
                         self.selectedSpot = spot
-                        print(selectedSpot)
                         self.presentDetailScreen.toggle()
                     })
                 }
@@ -30,11 +29,7 @@ struct SpotsView: View {
             }
             .navigationTitle("My Spots")
             .sheet(isPresented: $presentDetailScreen) {
-                if let spot = selectedSpot {
-                    MySpot(spot: spot)
-                } else {
-                     Text("No Spot")
-                }
+                MySpot(spot: $selectedSpot)
             }
         }
     }

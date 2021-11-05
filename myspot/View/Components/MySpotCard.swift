@@ -34,7 +34,7 @@ struct MySpotCard: View {
             Text("\(spot.location)")
                 .font(.body)
                 .cornerRadius(16)
-            Text("\(spot.instuctions)")
+            Text("Parking number: \(spot.number)")
                 .font(.caption)
                 .foregroundColor(Color.gray)
         }
