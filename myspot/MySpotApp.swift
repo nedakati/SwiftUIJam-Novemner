@@ -11,6 +11,12 @@ import SwiftUI
 struct MySpotApp: App {
     let persistenceController = PersistenceController.shared
 
+    init() {
+        if #available(iOS 15.0, *) {
+            UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance()
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
