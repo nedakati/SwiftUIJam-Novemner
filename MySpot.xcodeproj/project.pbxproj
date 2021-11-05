@@ -13,6 +13,8 @@
 		A9A008BD2735993A00247F58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A008BC2735993A00247F58 /* Preview Assets.xcassets */; };
 		A9A008BF2735993A00247F58 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A008BE2735993A00247F58 /* Persistence.swift */; };
 		A9A008C22735993A00247F58 /* MySpot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9A008C02735993A00247F58 /* MySpot.xcdatamodeld */; };
+		F936867A2735A74C00203301 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93686792735A74C00203301 /* HomeView.swift */; };
+		F936867C2735A75500203301 /* SpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936867B2735A75500203301 /* SpotsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A9A008BE2735993A00247F58 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A9A008C12735993A00247F58 /* MySpot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySpot.xcdatamodel; sourceTree = "<group>"; };
 		A9A008C32735993A00247F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93686792735A74C00203301 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = myspot/View/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		F936867B2735A75500203301 /* SpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpotsView.swift; path = myspot/View/SpotsView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,8 @@
 		A9A008B42735993500247F58 /* MySpot */ = {
 			isa = PBXGroup;
 			children = (
+				F93686782735A73F00203301 /* View */,
 				A9A008B52735993500247F58 /* MySpotApp.swift */,
-				A9A008B72735993500247F58 /* ContentView.swift */,
 				A9A008B92735993A00247F58 /* Assets.xcassets */,
 				A9A008BE2735993A00247F58 /* Persistence.swift */,
 				A9A008C32735993A00247F58 /* Info.plist */,
@@ -73,6 +77,16 @@
 				A9A008BC2735993A00247F58 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F93686782735A73F00203301 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9A008B72735993500247F58 /* ContentView.swift */,
+				F93686792735A74C00203301 /* HomeView.swift */,
+				F936867B2735A75500203301 /* SpotsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,7 +123,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9A008AD2735993500247F58 /* Build configuration list for PBXProject "MySpot" */;
+			buildConfigurationList = A9A008AD2735993500247F58 /* Build configuration list for PBXProject "myspot" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -147,6 +161,8 @@
 				A9A008BF2735993A00247F58 /* Persistence.swift in Sources */,
 				A9A008B82735993500247F58 /* ContentView.swift in Sources */,
 				A9A008B62735993500247F58 /* MySpotApp.swift in Sources */,
+				F936867A2735A74C00203301 /* HomeView.swift in Sources */,
+				F936867C2735A75500203301 /* SpotsView.swift in Sources */,
 				A9A008C22735993A00247F58 /* MySpot.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +333,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9A008AD2735993500247F58 /* Build configuration list for PBXProject "MySpot" */ = {
+		A9A008AD2735993500247F58 /* Build configuration list for PBXProject "myspot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9A008C42735993A00247F58 /* Debug */,
