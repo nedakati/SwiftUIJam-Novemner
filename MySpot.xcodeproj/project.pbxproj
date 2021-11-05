@@ -15,6 +15,8 @@
 		A9A008C22735993A00247F58 /* MySpot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9A008C02735993A00247F58 /* MySpot.xcdatamodeld */; };
 		F936867A2735A74C00203301 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93686792735A74C00203301 /* HomeView.swift */; };
 		F936867C2735A75500203301 /* SpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936867B2735A75500203301 /* SpotsView.swift */; };
+		F936867E2735AE4100203301 /* ReserveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936867D2735AE4100203301 /* ReserveView.swift */; };
+		F93686812735AFDB00203301 /* TimeRangePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93686802735AFDB00203301 /* TimeRangePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		A9A008C32735993A00247F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F93686792735A74C00203301 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = myspot/View/HomeView.swift; sourceTree = SOURCE_ROOT; };
 		F936867B2735A75500203301 /* SpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpotsView.swift; path = myspot/View/SpotsView.swift; sourceTree = SOURCE_ROOT; };
+		F936867D2735AE4100203301 /* ReserveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReserveView.swift; path = myspot/View/ReserveView.swift; sourceTree = SOURCE_ROOT; };
+		F93686802735AFDB00203301 /* TimeRangePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimeRangePickerView.swift; path = myspot/View/Components/TimeRangePickerView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +86,21 @@
 		F93686782735A73F00203301 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F936867F2735AFCD00203301 /* Components */,
 				A9A008B72735993500247F58 /* ContentView.swift */,
 				F93686792735A74C00203301 /* HomeView.swift */,
 				F936867B2735A75500203301 /* SpotsView.swift */,
+				F936867D2735AE4100203301 /* ReserveView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F936867F2735AFCD00203301 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F93686802735AFDB00203301 /* TimeRangePickerView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +174,8 @@
 			files = (
 				A9A008BF2735993A00247F58 /* Persistence.swift in Sources */,
 				A9A008B82735993500247F58 /* ContentView.swift in Sources */,
+				F93686812735AFDB00203301 /* TimeRangePickerView.swift in Sources */,
+				F936867E2735AE4100203301 /* ReserveView.swift in Sources */,
 				A9A008B62735993500247F58 /* MySpotApp.swift in Sources */,
 				F936867A2735A74C00203301 /* HomeView.swift in Sources */,
 				F936867C2735A75500203301 /* SpotsView.swift in Sources */,
@@ -293,7 +309,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MySpot/Preview Content\"";
-				DEVELOPMENT_TEAM = 5P26NUF2Q4;
+				DEVELOPMENT_TEAM = Y6P2NYW2G8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MySpot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -315,7 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MySpot/Preview Content\"";
-				DEVELOPMENT_TEAM = 5P26NUF2Q4;
+				DEVELOPMENT_TEAM = Y6P2NYW2G8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MySpot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
