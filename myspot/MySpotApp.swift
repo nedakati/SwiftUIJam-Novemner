@@ -11,6 +11,11 @@ import SwiftUI
 struct MySpotApp: App {
     let persistenceController = PersistenceController.shared
 
+    init() {
+        UITableView.appearance().separatorStyle = .none
+        UITableView.appearance().tableFooterView = UIView()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

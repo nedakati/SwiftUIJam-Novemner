@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9787CD02735AB4A00649850 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9787CCF2735AB4A00649850 /* Spot.swift */; };
+		A9787CD22735AEE000649850 /* MySpotCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9787CD12735AEE000649850 /* MySpotCard.swift */; };
+		A9787CD52735C84800649850 /* ListRowSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9787CD42735C84800649850 /* ListRowSeparator.swift */; };
+		A9787CD72735CAE000649850 /* MySpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9787CD62735CAE000649850 /* MySpot.swift */; };
 		A9A008B62735993500247F58 /* MySpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A008B52735993500247F58 /* MySpotApp.swift */; };
 		A9A008B82735993500247F58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A008B72735993500247F58 /* ContentView.swift */; };
 		A9A008BA2735993A00247F58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A008B92735993A00247F58 /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A9787CCF2735AB4A00649850 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
+		A9787CD12735AEE000649850 /* MySpotCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotCard.swift; sourceTree = "<group>"; };
+		A9787CD42735C84800649850 /* ListRowSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowSeparator.swift; sourceTree = "<group>"; };
+		A9787CD62735CAE000649850 /* MySpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpot.swift; sourceTree = "<group>"; };
 		A9A008B22735993500247F58 /* MySpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A008B52735993500247F58 /* MySpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotApp.swift; sourceTree = "<group>"; };
 		A9A008B72735993500247F58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9787CCE2735AB2A00649850 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9787CCF2735AB4A00649850 /* Spot.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A9787CD32735C83C00649850 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				A9787CD42735C84800649850 /* ListRowSeparator.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		A9A008A92735993500247F58 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +84,8 @@
 		A9A008B42735993500247F58 /* MySpot */ = {
 			isa = PBXGroup;
 			children = (
+				A9787CD32735C83C00649850 /* Modifiers */,
+				A9787CCE2735AB2A00649850 /* Model */,
 				F93686782735A73F00203301 /* View */,
 				A9A008B52735993500247F58 /* MySpotApp.swift */,
 				A9A008B92735993A00247F58 /* Assets.xcassets */,
@@ -85,6 +111,8 @@
 				A9A008B72735993500247F58 /* ContentView.swift */,
 				F93686792735A74C00203301 /* HomeView.swift */,
 				F936867B2735A75500203301 /* SpotsView.swift */,
+				A9787CD12735AEE000649850 /* MySpotCard.swift */,
+				A9787CD62735CAE000649850 /* MySpot.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,7 +151,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9A008AD2735993500247F58 /* Build configuration list for PBXProject "myspot" */;
+			buildConfigurationList = A9A008AD2735993500247F58 /* Build configuration list for PBXProject "MySpot" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -159,10 +187,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9A008BF2735993A00247F58 /* Persistence.swift in Sources */,
+				A9787CD22735AEE000649850 /* MySpotCard.swift in Sources */,
 				A9A008B82735993500247F58 /* ContentView.swift in Sources */,
+				A9787CD72735CAE000649850 /* MySpot.swift in Sources */,
 				A9A008B62735993500247F58 /* MySpotApp.swift in Sources */,
 				F936867A2735A74C00203301 /* HomeView.swift in Sources */,
+				A9787CD52735C84800649850 /* ListRowSeparator.swift in Sources */,
 				F936867C2735A75500203301 /* SpotsView.swift in Sources */,
+				A9787CD02735AB4A00649850 /* Spot.swift in Sources */,
 				A9A008C22735993A00247F58 /* MySpot.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,7 +365,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9A008AD2735993500247F58 /* Build configuration list for PBXProject "myspot" */ = {
+		A9A008AD2735993500247F58 /* Build configuration list for PBXProject "MySpot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9A008C42735993A00247F58 /* Debug */,
