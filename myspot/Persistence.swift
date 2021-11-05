@@ -1,8 +1,8 @@
 //
 //  Persistence.swift
-//  myspot
+//  MySpot
 //
-//  Created by Botond Magyarosi on 05.11.2021.
+//  Created by Katalin Neda on 05.11.2021.
 //
 
 import CoreData
@@ -31,7 +31,7 @@ struct PersistenceController {
     let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "myspot")
+        container = NSPersistentCloudKitContainer(name: "MySpot")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

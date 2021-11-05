@@ -1,14 +1,14 @@
 //
-//  myspotApp.swift
-//  myspot
+//  MySpotApp.swift
+//  MySpot
 //
-//  Created by Botond Magyarosi on 05.11.2021.
+//  Created by Katalin Neda on 05.11.2021.
 //
 
 import SwiftUI
 
 @main
-struct myspotApp: App {
+struct MySpotApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {

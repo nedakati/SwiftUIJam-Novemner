@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  myspot
+//  MySpot
 //
-//  Created by Botond Magyarosi on 05.11.2021.
+//  Created by Katalin Neda on 05.11.2021.
 //
 
 import SwiftUI
@@ -17,28 +17,20 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        List {
+            ForEach(items) { item in
+                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+            .onDelete(perform: deleteItems)
+        }
+        .toolbar {
+            #if os(iOS)
+            EditButton()
+            #endif
+
+            Button(action: addItem) {
+                Label("Add Item", systemImage: "plus")
             }
-            Text("Select an item")
         }
     }
 
