@@ -16,7 +16,7 @@ struct MySpotApp: App {
         UITableView.appearance().tableFooterView = UIView()
 
         if #available(iOS 15.0, *) {
-            UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance()
+//            UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance()
         }
     }
     
