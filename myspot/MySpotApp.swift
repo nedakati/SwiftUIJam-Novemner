@@ -12,8 +12,11 @@ struct MySpotApp: App {
     let persistenceController = PersistenceController.shared
 
     init() {
+        UITableView.appearance().separatorStyle = .none
+        UITableView.appearance().tableFooterView = UIView()
+
         if #available(iOS 15.0, *) {
-            UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance()
+//            UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance()
         }
     }
     

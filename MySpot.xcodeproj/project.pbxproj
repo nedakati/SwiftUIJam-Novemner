@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9787CD22735AEE000649850 /* MySpotCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9787CD12735AEE000649850 /* MySpotCard.swift */; };
+		A9787CD52735C84800649850 /* ListRowSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9787CD42735C84800649850 /* ListRowSeparator.swift */; };
+		A9787CD72735CAE000649850 /* MySpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9787CD62735CAE000649850 /* MySpotView.swift */; };
+		A9908643273695C70059FC53 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9908642273695C70059FC53 /* MapAnnotationView.swift */; };
+		A99086472736AEDC0059FC53 /* TextField+Underline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99086462736AEDC0059FC53 /* TextField+Underline.swift */; };
+		A99086492736B7F70059FC53 /* MakeSpotAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99086482736B7F70059FC53 /* MakeSpotAvailable.swift */; };
+		A990864D2736CBC50059FC53 /* BorderButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990864C2736CBC50059FC53 /* BorderButtonStyle.swift */; };
+		A99086502736D1320059FC53 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990864F2736D1320059FC53 /* ProfileView.swift */; };
+		A99086532736E34D0059FC53 /* AddSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99086522736E34D0059FC53 /* AddSpotView.swift */; };
+		A99086552736EA8B0059FC53 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99086542736EA8B0059FC53 /* LocationManager.swift */; };
+		A99086572736F17F0059FC53 /* AddSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99086562736F17F0059FC53 /* AddSpotViewController.swift */; };
 		A9A008B62735993500247F58 /* MySpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A008B52735993500247F58 /* MySpotApp.swift */; };
 		A9A008B82735993500247F58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A008B72735993500247F58 /* ContentView.swift */; };
 		A9A008BA2735993A00247F58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A008B92735993A00247F58 /* Assets.xcassets */; };
@@ -29,6 +40,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A9787CD12735AEE000649850 /* MySpotCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotCard.swift; sourceTree = "<group>"; };
+		A9787CD42735C84800649850 /* ListRowSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowSeparator.swift; sourceTree = "<group>"; };
+		A9787CD62735CAE000649850 /* MySpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotView.swift; sourceTree = "<group>"; };
+		A9908642273695C70059FC53 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
+		A99086462736AEDC0059FC53 /* TextField+Underline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Underline.swift"; sourceTree = "<group>"; };
+		A99086482736B7F70059FC53 /* MakeSpotAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSpotAvailable.swift; sourceTree = "<group>"; };
+		A990864C2736CBC50059FC53 /* BorderButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButtonStyle.swift; sourceTree = "<group>"; };
+		A990864F2736D1320059FC53 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A99086522736E34D0059FC53 /* AddSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpotView.swift; sourceTree = "<group>"; };
+		A99086542736EA8B0059FC53 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A99086562736F17F0059FC53 /* AddSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpotViewController.swift; sourceTree = "<group>"; };
 		A9A008B22735993500247F58 /* MySpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A008B52735993500247F58 /* MySpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotApp.swift; sourceTree = "<group>"; };
 		A9A008B72735993500247F58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,7 +60,7 @@
 		A9A008C12735993A00247F58 /* MySpot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySpot.xcdatamodel; sourceTree = "<group>"; };
 		A9A008C32735993A00247F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F93686792735A74C00203301 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = MySpot/View/Home/HomeView.swift; sourceTree = SOURCE_ROOT; };
-		F936867B2735A75500203301 /* SpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpotsView.swift; path = myspot/View/SpotsView.swift; sourceTree = SOURCE_ROOT; };
+		F936867B2735A75500203301 /* SpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpotsView.swift; path = MySpot/View/Spots/SpotsView.swift; sourceTree = SOURCE_ROOT; };
 		F936867D2735AE4100203301 /* ReserveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReserveView.swift; path = myspot/View/ReserveView.swift; sourceTree = SOURCE_ROOT; };
 		F93686802735AFDB00203301 /* TimeRangePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimeRangePickerView.swift; path = myspot/View/Components/TimeRangePickerView.swift; sourceTree = SOURCE_ROOT; };
 		F93686822735CD6500203301 /* AccentButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccentButtonStyle.swift; path = myspot/View/Components/AccentButtonStyle.swift; sourceTree = SOURCE_ROOT; };
@@ -63,6 +85,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9787CD32735C83C00649850 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				A9787CD42735C84800649850 /* ListRowSeparator.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		A99086442736A2D40059FC53 /* Spots */ = {
+			isa = PBXGroup;
+			children = (
+				F936867B2735A75500203301 /* SpotsView.swift */,
+				A9787CD62735CAE000649850 /* MySpotView.swift */,
+				A9787CD12735AEE000649850 /* MySpotCard.swift */,
+				A99086482736B7F70059FC53 /* MakeSpotAvailable.swift */,
+			);
+			path = Spots;
+			sourceTree = "<group>";
+		};
+		A99086452736AECA0059FC53 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A99086462736AEDC0059FC53 /* TextField+Underline.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A990864E2736D0E60059FC53 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A990864F2736D1320059FC53 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A99086512736E3410059FC53 /* Add Spot */ = {
+			isa = PBXGroup;
+			children = (
+				A99086522736E34D0059FC53 /* AddSpotView.swift */,
+			);
+			path = "Add Spot";
+			sourceTree = "<group>";
+		};
 		A9A008A92735993500247F58 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +147,8 @@
 		A9A008B42735993500247F58 /* MySpot */ = {
 			isa = PBXGroup;
 			children = (
+				A99086452736AECA0059FC53 /* Extensions */,
+				A9787CD32735C83C00649850 /* Modifiers */,
 				F93686852735D93F00203301 /* Data */,
 				F93686842735D93500203301 /* Util */,
 				F93686782735A73F00203301 /* View */,
@@ -106,11 +173,13 @@
 		F93686782735A73F00203301 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A99086512736E3410059FC53 /* Add Spot */,
+				A990864E2736D0E60059FC53 /* Profile */,
+				A99086442736A2D40059FC53 /* Spots */,
 				F93686912735EF1900203301 /* Map */,
 				F936868C2735E93200203301 /* Home */,
 				F936867F2735AFCD00203301 /* Components */,
 				A9A008B72735993500247F58 /* ContentView.swift */,
-				F936867B2735A75500203301 /* SpotsView.swift */,
 				F936867D2735AE4100203301 /* ReserveView.swift */,
 			);
 			path = View;
@@ -122,6 +191,8 @@
 				F93686802735AFDB00203301 /* TimeRangePickerView.swift */,
 				F93686822735CD6500203301 /* AccentButtonStyle.swift */,
 				F936868A2735DEE300203301 /* ReservationSpotView.swift */,
+				A9908642273695C70059FC53 /* MapAnnotationView.swift */,
+				A990864C2736CBC50059FC53 /* BorderButtonStyle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -131,6 +202,7 @@
 			children = (
 				F93686882735DA0200203301 /* Date+Util.swift */,
 				F936868F2735EA3C00203301 /* Colors.swift */,
+				A99086542736EA8B0059FC53 /* LocationManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -157,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				F93686922735EF3700203301 /* FindSpotMapViewController.swift */,
+				A99086562736F17F0059FC53 /* AddSpotViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -212,7 +285,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9A008AD2735993500247F58 /* Build configuration list for PBXProject "myspot" */;
+			buildConfigurationList = A9A008AD2735993500247F58 /* Build configuration list for PBXProject "MySpot" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -249,21 +322,32 @@
 			files = (
 				F93686872735D95900203301 /* ReservationRange.swift in Sources */,
 				A9A008BF2735993A00247F58 /* Persistence.swift in Sources */,
+				A9787CD22735AEE000649850 /* MySpotCard.swift in Sources */,
+				A99086492736B7F70059FC53 /* MakeSpotAvailable.swift in Sources */,
 				F9368699273672FC00203301 /* Spot.swift in Sources */,
 				A9A008B82735993500247F58 /* ContentView.swift in Sources */,
+				A9787CD72735CAE000649850 /* MySpotView.swift in Sources */,
+				A99086502736D1320059FC53 /* ProfileView.swift in Sources */,
 				F93686902735EA3C00203301 /* Colors.swift in Sources */,
 				F936868B2735DEE300203301 /* ReservationSpotView.swift in Sources */,
 				F93686812735AFDB00203301 /* TimeRangePickerView.swift in Sources */,
 				F936868E2735E94300203301 /* EarnCoinsView.swift in Sources */,
 				F93686892735DA0200203301 /* Date+Util.swift in Sources */,
 				F936867E2735AE4100203301 /* ReserveView.swift in Sources */,
+				A99086532736E34D0059FC53 /* AddSpotView.swift in Sources */,
+				A990864D2736CBC50059FC53 /* BorderButtonStyle.swift in Sources */,
+				A9908643273695C70059FC53 /* MapAnnotationView.swift in Sources */,
 				A9A008B62735993500247F58 /* MySpotApp.swift in Sources */,
 				F936867A2735A74C00203301 /* HomeView.swift in Sources */,
+				A9787CD52735C84800649850 /* ListRowSeparator.swift in Sources */,
 				F936867C2735A75500203301 /* SpotsView.swift in Sources */,
 				F93686932735EF3700203301 /* FindSpotMapViewController.swift in Sources */,
 				F93686832735CD6500203301 /* AccentButtonStyle.swift in Sources */,
+				A99086472736AEDC0059FC53 /* TextField+Underline.swift in Sources */,
+				A99086572736F17F0059FC53 /* AddSpotViewController.swift in Sources */,
 				A9A008C22735993A00247F58 /* MySpot.xcdatamodeld in Sources */,
 				F9368696273672CB00203301 /* SpotSearchService.swift in Sources */,
+				A99086552736EA8B0059FC53 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +517,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9A008AD2735993500247F58 /* Build configuration list for PBXProject "myspot" */ = {
+		A9A008AD2735993500247F58 /* Build configuration list for PBXProject "MySpot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9A008C42735993A00247F58 /* Debug */,

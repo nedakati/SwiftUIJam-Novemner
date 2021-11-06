@@ -1,22 +1,22 @@
 //
-//  ReserveView.swift
+//  MakeSpotAvailable.swift
 //  MySpot
 //
-//  Created by Botond Magyarosi on 05.11.2021.
+//  Created by Katalin Neda on 06.11.2021.
 //
 
 import SwiftUI
 
-struct ReserveView: View {
+struct MakeSpotAvailable: View {
     @Environment(\.presentationMode) var presentationMode
     
-    let spot: Spot
+    @Binding var spot: Spot
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .firstTextBaseline) {
                 VStack(alignment: .leading) {
-                    Text("Reserve the spot")
+                    Text("Make Spot Available")
                         .fontWeight(.bold)
                         .font(.largeTitle)
                     Text(spot.address)
@@ -35,7 +35,11 @@ struct ReserveView: View {
             
             TimeRangePickerView(availability: spot.availability)
             
-            Button("Reserve my spot", action: {})
+            Button("Confirm", action: {
+                spot.isPublished = true
+//                spot.availability.append(SpotAvailability(startDate: <#T##Date#>, endDate: <#T##Date#>))
+                presentationMode.wrappedValue.dismiss()
+            })
                 .buttonStyle(AccentButtonStyle())
                 .padding()
                 .frame(
@@ -46,10 +50,8 @@ struct ReserveView: View {
     }
 }
 
-struct ReserveView_Previews: PreviewProvider {
-    
+struct MakeSpotAvailable_Previews: PreviewProvider {
     static var previews: some View {
-        let spot = Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing", availability: [])
-        return ReserveView(spot: spot)
+        ReserveView(spot: Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing", availability: []))
     }
 }

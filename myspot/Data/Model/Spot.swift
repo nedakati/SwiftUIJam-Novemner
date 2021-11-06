@@ -6,13 +6,24 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct SpotAvailability: Codable {
     var startDate: Date
     var endDate: Date
 }
 
-struct Spot: Codable {
-    let address: String
+struct Coordinates: Codable {
+    var latitude: Double
+    var longitude: Double
+}
+
+struct Spot: Codable, Identifiable {
+    var id = UUID()
+    var address: String
+    var coordinates: Coordinates
+    var number: String
+    var instuctions: String
     let availability: [SpotAvailability]
+    var isPublished: Bool = false
 }

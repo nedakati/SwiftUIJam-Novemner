@@ -1,20 +1,20 @@
 //
-//  SpotsView.swift
+//  ProfileView.swift
 //  MySpot
 //
-//  Created by Botond Magyarosi on 05.11.2021.
+//  Created by Katalin Neda on 06.11.2021.
 //
 
 import SwiftUI
 
-struct SpotsView: View {
+struct ProfileView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct SpotsView_Previews: PreviewProvider {
+struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        SpotsView()
+        ProfileView()
     }
 }
