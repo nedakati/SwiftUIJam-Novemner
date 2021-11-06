@@ -21,6 +21,13 @@
 		F936867C2735A75500203301 /* SpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936867B2735A75500203301 /* SpotsView.swift */; };
 		F936867E2735AE4100203301 /* ReserveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936867D2735AE4100203301 /* ReserveView.swift */; };
 		F93686812735AFDB00203301 /* TimeRangePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93686802735AFDB00203301 /* TimeRangePickerView.swift */; };
+		F93686832735CD6500203301 /* AccentButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93686822735CD6500203301 /* AccentButtonStyle.swift */; };
+		F93686872735D95900203301 /* ReservationRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93686862735D95900203301 /* ReservationRange.swift */; };
+		F93686892735DA0200203301 /* Date+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93686882735DA0200203301 /* Date+Util.swift */; };
+		F936868B2735DEE300203301 /* ReservationSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936868A2735DEE300203301 /* ReservationSpotView.swift */; };
+		F936868E2735E94300203301 /* EarnCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936868D2735E94300203301 /* EarnCoinsView.swift */; };
+		F93686902735EA3C00203301 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936868F2735EA3C00203301 /* Colors.swift */; };
+		F93686932735EF3700203301 /* FindSpotMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93686922735EF3700203301 /* FindSpotMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +43,17 @@
 		A9A008BE2735993A00247F58 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A9A008C12735993A00247F58 /* MySpot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySpot.xcdatamodel; sourceTree = "<group>"; };
 		A9A008C32735993A00247F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F93686792735A74C00203301 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = myspot/View/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		F93686792735A74C00203301 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = MySpot/View/Home/HomeView.swift; sourceTree = SOURCE_ROOT; };
 		F936867B2735A75500203301 /* SpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpotsView.swift; path = myspot/View/SpotsView.swift; sourceTree = SOURCE_ROOT; };
 		F936867D2735AE4100203301 /* ReserveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReserveView.swift; path = myspot/View/ReserveView.swift; sourceTree = SOURCE_ROOT; };
 		F93686802735AFDB00203301 /* TimeRangePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimeRangePickerView.swift; path = myspot/View/Components/TimeRangePickerView.swift; sourceTree = SOURCE_ROOT; };
+		F93686822735CD6500203301 /* AccentButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccentButtonStyle.swift; path = myspot/View/Components/AccentButtonStyle.swift; sourceTree = SOURCE_ROOT; };
+		F93686862735D95900203301 /* ReservationRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReservationRange.swift; path = myspot/Data/ReservationRange.swift; sourceTree = SOURCE_ROOT; };
+		F93686882735DA0200203301 /* Date+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Date+Util.swift"; path = "myspot/Util/Date+Util.swift"; sourceTree = SOURCE_ROOT; };
+		F936868A2735DEE300203301 /* ReservationSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReservationSpotView.swift; path = myspot/View/Components/ReservationSpotView.swift; sourceTree = SOURCE_ROOT; };
+		F936868D2735E94300203301 /* EarnCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EarnCoinsView.swift; path = myspot/View/Home/EarnCoinsView.swift; sourceTree = SOURCE_ROOT; };
+		F936868F2735EA3C00203301 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = myspot/Util/Colors.swift; sourceTree = SOURCE_ROOT; };
+		F93686922735EF3700203301 /* FindSpotMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FindSpotMapViewController.swift; path = myspot/View/Map/FindSpotMapViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +104,8 @@
 			children = (
 				A9787CD32735C83C00649850 /* Modifiers */,
 				A9787CCE2735AB2A00649850 /* Model */,
+				F93686852735D93F00203301 /* Data */,
+				F93686842735D93500203301 /* Util */,
 				F93686782735A73F00203301 /* View */,
 				A9A008B52735993500247F58 /* MySpotApp.swift */,
 				A9A008B92735993A00247F58 /* Assets.xcassets */,
@@ -112,9 +128,10 @@
 		F93686782735A73F00203301 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F93686912735EF1900203301 /* Map */,
+				F936868C2735E93200203301 /* Home */,
 				F936867F2735AFCD00203301 /* Components */,
 				A9A008B72735993500247F58 /* ContentView.swift */,
-				F93686792735A74C00203301 /* HomeView.swift */,
 				F936867B2735A75500203301 /* SpotsView.swift */,
 				A9787CD62735CAE000649850 /* MySpot.swift */,
 				F936867D2735AE4100203301 /* ReserveView.swift */,
@@ -127,8 +144,44 @@
 			children = (
 				A9787CD12735AEE000649850 /* MySpotCard.swift */,
 				F93686802735AFDB00203301 /* TimeRangePickerView.swift */,
+				F93686822735CD6500203301 /* AccentButtonStyle.swift */,
+				F936868A2735DEE300203301 /* ReservationSpotView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F93686842735D93500203301 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F93686882735DA0200203301 /* Date+Util.swift */,
+				F936868F2735EA3C00203301 /* Colors.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F93686852735D93F00203301 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F93686862735D95900203301 /* ReservationRange.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F936868C2735E93200203301 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F93686792735A74C00203301 /* HomeView.swift */,
+				F936868D2735E94300203301 /* EarnCoinsView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F93686912735EF1900203301 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F93686922735EF3700203301 /* FindSpotMapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,17 +253,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93686872735D95900203301 /* ReservationRange.swift in Sources */,
 				A9A008BF2735993A00247F58 /* Persistence.swift in Sources */,
 				A9787CD22735AEE000649850 /* MySpotCard.swift in Sources */,
 				A9A008B82735993500247F58 /* ContentView.swift in Sources */,
 				A9787CD72735CAE000649850 /* MySpot.swift in Sources */,
+				F93686902735EA3C00203301 /* Colors.swift in Sources */,
+				F936868B2735DEE300203301 /* ReservationSpotView.swift in Sources */,
 				F93686812735AFDB00203301 /* TimeRangePickerView.swift in Sources */,
+				F936868E2735E94300203301 /* EarnCoinsView.swift in Sources */,
+				F93686892735DA0200203301 /* Date+Util.swift in Sources */,
 				F936867E2735AE4100203301 /* ReserveView.swift in Sources */,
 				A9A008B62735993500247F58 /* MySpotApp.swift in Sources */,
 				F936867A2735A74C00203301 /* HomeView.swift in Sources */,
 				A9787CD52735C84800649850 /* ListRowSeparator.swift in Sources */,
 				F936867C2735A75500203301 /* SpotsView.swift in Sources */,
 				A9787CD02735AB4A00649850 /* Spot.swift in Sources */,
+				F93686932735EF3700203301 /* FindSpotMapViewController.swift in Sources */,
+				F93686832735CD6500203301 /* AccentButtonStyle.swift in Sources */,
 				A9A008C22735993A00247F58 /* MySpot.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
