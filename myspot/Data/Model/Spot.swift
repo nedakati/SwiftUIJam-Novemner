@@ -25,4 +25,5 @@ struct Spot: Codable, Identifiable {
     var number: String
     var instuctions: String
     let availability: [SpotAvailability]
+    var isPublished: Bool = false
 }

@@ -33,9 +33,13 @@ struct MakeSpotAvailable: View {
             }
             .padding()
             
-            TimeRangePickerView(availability: [])
+            TimeRangePickerView(availability: spot.availability)
             
-            Button("Confirm", action: {})
+            Button("Confirm", action: {
+                spot.isPublished = true
+//                spot.availability.append(SpotAvailability(startDate: <#T##Date#>, endDate: <#T##Date#>))
+                presentationMode.wrappedValue.dismiss()
+            })
                 .buttonStyle(AccentButtonStyle())
                 .padding()
                 .frame(

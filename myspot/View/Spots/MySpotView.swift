@@ -32,7 +32,6 @@ struct MySpotView: View {
     }
     
     var body: some View {
-        NavigationView {
             VStack(alignment: .leading, spacing: 24) {
                 Map(coordinateRegion: $region, annotationItems: [spot]) { spot in
                     MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: spot.coordinates.latitude,
@@ -80,17 +79,7 @@ struct MySpotView: View {
                     )
             }
             .padding()
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { presentationMode.wrappedValue.dismiss() }) {
-                        Image(systemName: "xmark.circle.fill")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
-                }
-            }
             .navigationTitle("Spot Details")
-        }
     }
     
     // MARK: - Private methods

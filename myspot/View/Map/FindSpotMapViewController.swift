@@ -27,7 +27,7 @@ struct FindSpotMap: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: FindSpotMapViewController, context: Context) { }
 }
 
-private class MKSpotAnnotation: NSObject, MKAnnotation {
+class MKSpotAnnotation: NSObject, MKAnnotation {
     let title: String?
     var coordinate: CLLocationCoordinate2D
     

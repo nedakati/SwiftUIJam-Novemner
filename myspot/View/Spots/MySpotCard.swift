@@ -17,7 +17,6 @@ struct MySpotCard: View {
 
     private let onSelect: (() -> Void)?
 
-    
     init(spot: Binding<Spot>, onSelect: (() -> Void)?) {
         self._spot = spot
         self.onSelect = onSelect
@@ -28,7 +27,12 @@ struct MySpotCard: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Map(coordinateRegion: $region)
+            Map(coordinateRegion: $region, annotationItems: [spot]) { spot in
+                MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: spot.coordinates.latitude,
+                                                                 longitude: spot.coordinates.longitude)) {
+                    MapAnnotationView()
+                }
+            }
                 .frame(height: 130)
                 .cornerRadius(16)
                 .padding(4)
@@ -43,17 +47,32 @@ struct MySpotCard: View {
                 .font(.caption)
                 .foregroundColor(Color.gray)
             
-            Button("Make this spot available", action: {
-                self.openTimeRangePicker.toggle()
-            })
-                .buttonStyle(AccentButtonStyle())
-                .padding()
-                .frame(
-                    minWidth: 0,
-                    maxWidth: .infinity
-                )
-            .sheet(isPresented: $openTimeRangePicker) {
-                MakeSpotAvailable(spot: $spot)
+            if !spot.isPublished {
+                Button("Publish spot", action: {
+                    self.openTimeRangePicker.toggle()
+                })
+                    .buttonStyle(AccentButtonStyle())
+                    .padding()
+                    .frame(
+                        minWidth: 0,
+                        maxWidth: .infinity
+                    )
+                .sheet(isPresented: $openTimeRangePicker) {
+                    MakeSpotAvailable(spot: $spot)
+                }
+            } else {
+                Button("Cancel Published Spot", action: {
+                    self.spot.isPublished = false
+                })
+                    .buttonStyle(BorderButtonStyle())
+                    .padding()
+                    .frame(
+                        minWidth: 0,
+                        maxWidth: .infinity
+                    )
+                .sheet(isPresented: $openTimeRangePicker) {
+                    MakeSpotAvailable(spot: $spot)
+                }
             }
         }
         .padding()
