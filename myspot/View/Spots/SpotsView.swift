@@ -10,8 +10,8 @@ import CoreLocation
 
 struct SpotsView: View {
     
-    @State var spots: [Spot] = [Spot(location: "Location", coordinates: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing"),
-                         Spot(location: "Location", coordinates: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), number: "2", instuctions: "Nothing")]
+    @State var spots: [Spot] = [Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing", availability: []),
+                                Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "2", instuctions: "Nothing", availability: [])]
     
     @State private var selectedSpot: Spot?
     @State private var presentDetailScreen = false

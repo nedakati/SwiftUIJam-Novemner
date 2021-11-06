@@ -19,7 +19,7 @@ struct MakeSpotAvailable: View {
                     Text("Make Spot Available")
                         .fontWeight(.bold)
                         .font(.largeTitle)
-                    Text(spot.location)
+                    Text(spot.address)
                         .foregroundColor(.accentColor)
                         .font(.title2)
                         .fontWeight(.medium)
@@ -33,7 +33,7 @@ struct MakeSpotAvailable: View {
             }
             .padding()
             
-            TimeRangePickerView()
+            TimeRangePickerView(availability: [])
             
             Button("Confirm", action: {})
                 .buttonStyle(AccentButtonStyle())
@@ -48,6 +48,6 @@ struct MakeSpotAvailable: View {
 
 struct MakeSpotAvailable_Previews: PreviewProvider {
     static var previews: some View {
-        ReserveView()
+        ReserveView(spot: Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing", availability: []))
     }
 }

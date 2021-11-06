@@ -16,7 +16,7 @@ struct AnnotatedItem: Identifiable {
 
 struct HomeView: View {
     @State private var showsEarnCoins = false
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @State private var selectedSpot: AnnotatedItem?
     
     private var pointsOfInterest = [
         AnnotatedItem(name: "Lidl", coordinate: .init(latitude: 46.777412, longitude: 23.608454)),
@@ -26,7 +26,7 @@ struct HomeView: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            FindSpotMap()
+            FindSpotMap(selectedSpot: $selectedSpot)
                 .edgesIgnoringSafeArea(.all)
 
             VStack(alignment: .leading) {
@@ -38,9 +38,6 @@ struct HomeView: View {
                 CurrentBookingCard()
                     .padding()
             }
-        }
-        .onAppear {
-            CLLocationManager().requestWhenInUseAuthorization()
         }
         .sheet(isPresented: $showsEarnCoins, content: EarnCoinsView.init)
 //        .sheet(isPresented: .constant(true), onDismiss: nil, content: ReserveView.init)

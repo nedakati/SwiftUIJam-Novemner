@@ -8,6 +8,7 @@
 import SwiftUI
 
 private let textWidth: CGFloat = 60
+private let hourMarkHeight: CGFloat = 50
 
 struct TimeRangePickerView: View {
     @State private var reservation: ReservationRange?
@@ -15,9 +16,13 @@ struct TimeRangePickerView: View {
     @State private var offset = CGSize.zero
     @State private var isDragging = false
 
+    let availability: [SpotAvailability]
+    
+    internal init(availability: [SpotAvailability]) {
+        self.availability = availability
+    }
     
     var body: some View {
-        
         let dragGesture = DragGesture()
                     .onChanged { value in self.offset = value.translation }
                     .onEnded { _ in
@@ -41,6 +46,7 @@ struct TimeRangePickerView: View {
         ScrollView(showsIndicators: false) {
             ZStack(alignment: .top) {
                 backgroundGridView
+                unavailableSpotsView
                 
                 if let reservation = reservation {
                     ReservationSpotView(reservation: reservation)
@@ -48,8 +54,8 @@ struct TimeRangePickerView: View {
                             minWidth: 0,
                             maxWidth: .infinity
                         )
-                        .frame(height: 50)
-                        .offset(x: 0, y: CGFloat(reservation.startDate.hours) * 50 + 25)
+                        .frame(height: hourMarkHeight)
+                        .offset(x: 0, y: CGFloat(reservation.startDate.hours) * hourMarkHeight + hourMarkHeight / 2)
                         .scaleEffect(isDragging ? 1.1 : 1)
                         .gesture(combined)
                 }
@@ -57,10 +63,24 @@ struct TimeRangePickerView: View {
         }
     }
     
+    private var unavailableSpotsView: some View {
+        VStack {
+            Rectangle()
+                .fill(Color.gray.opacity(0.25))
+                .offset(x: textWidth, y: hourMarkHeight / 2)
+                .frame(height: 225)
+
+        }
+        .frame(
+            minWidth: 0,
+            maxWidth: .infinity
+        )
+    }
+    
     private var backgroundGridView: some View {
         VStack(spacing: 0) {
             ForEach(0...24, id: \.self) { index in
-                HStack {
+                HStack(spacing: 0) {
                     Text(String(format: "%.2d:00", index))
                         .font(.caption)
                         .frame(width: textWidth)
@@ -90,7 +110,7 @@ struct TimeRangePickerView: View {
 #if DEBUG
 struct TimeRangePickerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimeRangePickerView()
+        TimeRangePickerView(availability: [])
     }
 }
 #endif

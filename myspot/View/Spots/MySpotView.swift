@@ -21,10 +21,12 @@ struct MySpotView: View {
 
     init(spot: Binding<Spot>) {
         self._spot = spot
-        self._region = State(initialValue: MKCoordinateRegion(center: spot.coordinates.wrappedValue,
+        let coordinates = CLLocationCoordinate2D(latitude: spot.coordinates.wrappedValue.latitude,
+                                                 longitude: spot.coordinates.wrappedValue.longitude)
+        self._region = State(initialValue: MKCoordinateRegion(center: coordinates,
                                                               span: MKCoordinateSpan(latitudeDelta: 00.1, longitudeDelta: 00.1)))
         
-        self._address = State(initialValue: spot.location.wrappedValue)
+        self._address = State(initialValue: spot.address.wrappedValue)
         self._number = State(initialValue: spot.number.wrappedValue)
         self._instructions = State(initialValue: spot.instuctions.wrappedValue)
     }
@@ -33,7 +35,8 @@ struct MySpotView: View {
         NavigationView {
             VStack(alignment: .leading, spacing: 24) {
                 Map(coordinateRegion: $region, annotationItems: [spot]) { spot in
-                    MapAnnotation(coordinate: spot.coordinates) {
+                    MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: spot.coordinates.latitude,
+                                                                     longitude: spot.coordinates.longitude)) {
                         MapAnnotationView()
                     }
                 }
@@ -93,7 +96,7 @@ struct MySpotView: View {
     // MARK: - Private methods
     
     private func saveChanges() {
-        spot.location = address
+        spot.address = address
         spot.number = number
         spot.instuctions = instructions
         
@@ -103,6 +106,6 @@ struct MySpotView: View {
 
 struct MySpot_Previews: PreviewProvider {
     static var previews: some View {
-        MySpotView(spot: .constant(Spot(location: "Location", coordinates: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing")))
+        MySpotView(spot: .constant(Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing", availability: [])))
     }
 }

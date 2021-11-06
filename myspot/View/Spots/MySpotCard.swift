@@ -21,7 +21,9 @@ struct MySpotCard: View {
     init(spot: Binding<Spot>, onSelect: (() -> Void)?) {
         self._spot = spot
         self.onSelect = onSelect
-        self._region = State(initialValue: MKCoordinateRegion(center: spot.coordinates.wrappedValue, span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)))
+        let coordinates = CLLocationCoordinate2D(latitude: spot.coordinates.wrappedValue.latitude,
+                                                 longitude: spot.coordinates.wrappedValue.longitude)
+        self._region = State(initialValue: MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)))
     }
 
     var body: some View {
@@ -34,7 +36,7 @@ struct MySpotCard: View {
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(Color.accent, lineWidth: 1)
                 )
-            Text("\(spot.location)")
+            Text("\(spot.address)")
                 .font(.body)
                 .cornerRadius(16)
             Text("Parking number: \(spot.number)")
@@ -63,6 +65,6 @@ struct MySpotCard: View {
 
 struct MySpotCard_Previews: PreviewProvider {
     static var previews: some View {
-        MySpotCard(spot: .constant(Spot(location: "Location", coordinates: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing")), onSelect: { })
+        MySpotCard(spot: .constant(Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing", availability: [])), onSelect: { })
     }
 }
