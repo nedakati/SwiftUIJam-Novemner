@@ -12,8 +12,6 @@ struct EarnCoinsView: View {
     
     var body: some View {
         NavigationView {
-            
-            
             ZStack(alignment: .bottom) {
                 Image("illustration_parking")
                     .resizable()
@@ -33,7 +31,8 @@ struct EarnCoinsView: View {
                     Text("Invite a friend")
                         .fontWeight(.bold)
                     Text("Invite a friend and after their first parking you both get 2 coins.")
-                        .padding(.bottom)
+                    Button("Invite a friend", action: { })
+                        .buttonStyle(AccentButtonStyle())
                         
                     Spacer()
                 }

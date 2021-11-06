@@ -10,6 +10,8 @@ import SwiftUI
 struct ReserveView: View {
     @Environment(\.presentationMode) var presentationMode
     
+    let spot: Spot
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .firstTextBaseline) {
@@ -17,7 +19,7 @@ struct ReserveView: View {
                     Text("Reserve the spot")
                         .fontWeight(.bold)
                         .font(.largeTitle)
-                    Text("101-165 W 20th St")
+                    Text(spot.address)
                         .foregroundColor(.accentColor)
                         .font(.title2)
                         .fontWeight(.medium)
@@ -31,7 +33,7 @@ struct ReserveView: View {
             }
             .padding()
             
-            TimeRangePickerView()
+            TimeRangePickerView(availability: spot.availability)
             
             Button("Reserve my spot", action: {})
                 .buttonStyle(AccentButtonStyle())
@@ -45,7 +47,9 @@ struct ReserveView: View {
 }
 
 struct ReserveView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ReserveView()
+        let spot = Spot(address: "101-165 W 20th St", availability: [SpotAvailability(startDate: Date(), endDate: Date().advanced(by: 7600))])
+        return ReserveView(spot: spot)
     }
 }
