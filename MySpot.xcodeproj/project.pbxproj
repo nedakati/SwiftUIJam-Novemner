@@ -19,6 +19,11 @@
 		A99086552736EA8B0059FC53 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99086542736EA8B0059FC53 /* LocationManager.swift */; };
 		A99086572736F17F0059FC53 /* AddSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99086562736F17F0059FC53 /* AddSpotViewController.swift */; };
 		A9908659273704200059FC53 /* SpotsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9908658273704200059FC53 /* SpotsService.swift */; };
+		A990865C2737FE210059FC53 /* FireworkGeometryEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990865B2737FE210059FC53 /* FireworkGeometryEffect.swift */; };
+		A990865E273800E20059FC53 /* FireworkModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990865D273800E20059FC53 /* FireworkModifier.swift */; };
+		A9908660273802290059FC53 /* FireworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990865F273802290059FC53 /* FireworkView.swift */; };
+		A9908665273811580059FC53 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9908664273811580059FC53 /* PopupView.swift */; };
+		A9908667273814310059FC53 /* CongratulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9908666273814310059FC53 /* CongratulationView.swift */; };
 		A9A008B62735993500247F58 /* MySpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A008B52735993500247F58 /* MySpotApp.swift */; };
 		A9A008B82735993500247F58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A008B72735993500247F58 /* ContentView.swift */; };
 		A9A008BA2735993A00247F58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A008B92735993A00247F58 /* Assets.xcassets */; };
@@ -53,6 +58,11 @@
 		A99086542736EA8B0059FC53 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A99086562736F17F0059FC53 /* AddSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpotViewController.swift; sourceTree = "<group>"; };
 		A9908658273704200059FC53 /* SpotsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsService.swift; sourceTree = "<group>"; };
+		A990865B2737FE210059FC53 /* FireworkGeometryEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworkGeometryEffect.swift; sourceTree = "<group>"; };
+		A990865D273800E20059FC53 /* FireworkModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworkModifier.swift; sourceTree = "<group>"; };
+		A990865F273802290059FC53 /* FireworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworkView.swift; sourceTree = "<group>"; };
+		A9908664273811580059FC53 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		A9908666273814310059FC53 /* CongratulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationView.swift; sourceTree = "<group>"; };
 		A9A008B22735993500247F58 /* MySpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A008B52735993500247F58 /* MySpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotApp.swift; sourceTree = "<group>"; };
 		A9A008B72735993500247F58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,8 +136,27 @@
 			isa = PBXGroup;
 			children = (
 				A99086522736E34D0059FC53 /* AddSpotView.swift */,
+				A9908666273814310059FC53 /* CongratulationView.swift */,
 			);
 			path = "Add Spot";
+			sourceTree = "<group>";
+		};
+		A990865A2737FE000059FC53 /* Fireworks */ = {
+			isa = PBXGroup;
+			children = (
+				A990865B2737FE210059FC53 /* FireworkGeometryEffect.swift */,
+				A990865D273800E20059FC53 /* FireworkModifier.swift */,
+				A990865F273802290059FC53 /* FireworkView.swift */,
+			);
+			path = Fireworks;
+			sourceTree = "<group>";
+		};
+		A99086612738083D0059FC53 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				A9908664273811580059FC53 /* PopupView.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 		A9A008A92735993500247F58 = {
@@ -175,6 +204,8 @@
 		F93686782735A73F00203301 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A99086612738083D0059FC53 /* Popup */,
+				A990865A2737FE000059FC53 /* Fireworks */,
 				A99086512736E3410059FC53 /* Add Spot */,
 				A990864E2736D0E60059FC53 /* Profile */,
 				A99086442736A2D40059FC53 /* Spots */,
@@ -324,10 +355,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F93686872735D95900203301 /* ReservationRange.swift in Sources */,
+				A9908667273814310059FC53 /* CongratulationView.swift in Sources */,
 				A9A008BF2735993A00247F58 /* Persistence.swift in Sources */,
 				A9787CD22735AEE000649850 /* MySpotCard.swift in Sources */,
 				A99086492736B7F70059FC53 /* MakeSpotAvailable.swift in Sources */,
 				F9368699273672FC00203301 /* Spot.swift in Sources */,
+				A990865C2737FE210059FC53 /* FireworkGeometryEffect.swift in Sources */,
 				A9A008B82735993500247F58 /* ContentView.swift in Sources */,
 				A9787CD72735CAE000649850 /* MySpotView.swift in Sources */,
 				A99086502736D1320059FC53 /* ProfileView.swift in Sources */,
@@ -336,8 +369,10 @@
 				F93686812735AFDB00203301 /* TimeRangePickerView.swift in Sources */,
 				F936868E2735E94300203301 /* EarnCoinsView.swift in Sources */,
 				F93686892735DA0200203301 /* Date+Util.swift in Sources */,
+				A990865E273800E20059FC53 /* FireworkModifier.swift in Sources */,
 				F936867E2735AE4100203301 /* ReserveView.swift in Sources */,
 				A99086532736E34D0059FC53 /* AddSpotView.swift in Sources */,
+				A9908660273802290059FC53 /* FireworkView.swift in Sources */,
 				A990864D2736CBC50059FC53 /* BorderButtonStyle.swift in Sources */,
 				A9908643273695C70059FC53 /* MapAnnotationView.swift in Sources */,
 				A9A008B62735993500247F58 /* MySpotApp.swift in Sources */,
@@ -346,6 +381,7 @@
 				A9787CD52735C84800649850 /* ListRowSeparator.swift in Sources */,
 				F936867C2735A75500203301 /* SpotsView.swift in Sources */,
 				F93686932735EF3700203301 /* FindSpotMapViewController.swift in Sources */,
+				A9908665273811580059FC53 /* PopupView.swift in Sources */,
 				F93686832735CD6500203301 /* AccentButtonStyle.swift in Sources */,
 				A99086472736AEDC0059FC53 /* TextField+Underline.swift in Sources */,
 				A99086572736F17F0059FC53 /* AddSpotViewController.swift in Sources */,
