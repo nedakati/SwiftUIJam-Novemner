@@ -30,6 +30,6 @@ struct ListRowSeparator: ViewModifier {
 
 extension View {
     func hideRowSeparator() -> some View {
-        modifier(ListRowSeparator(insets: EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)))
+        modifier(ListRowSeparator(insets: EdgeInsets(top: 0, leading: 100, bottom: 0, trailing: 0)))
     }
 }

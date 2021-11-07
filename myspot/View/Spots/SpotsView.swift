@@ -9,39 +9,29 @@ import SwiftUI
 import CoreLocation
 
 struct SpotsView: View {
-    
-    @State var spots: [Spot]
-    
-    private var spotsService: SpotsService
-    
-    init(spotsService: SpotsService) {
-        self.spotsService = spotsService
-        self._spots = State(initialValue: spotsService.spots.spots)
-    }
+
+    @ObservedObject var spotsService: SpotsService = SpotsService()
     
     @State private var selectedSpot: Spot?
     @State private var addNewItemIsPresented: Bool = false
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(spots.indices) { index in
-                    ZStack {
-                        MySpotCard(spot: $spots[index], onSelect: {
-                            self.selectedSpot = spots[index]
-                        })
-                        .background(Color.white)
-                        .cornerRadius(16)
-                        .shadow(color: .separator, radius: 6, x: 0, y: 0)
-                        .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
-                        
-                        NavigationLink(destination: MySpotView(spot: $spots[index])) {
-
-                        }.buttonStyle(PlainButtonStyle()).frame(width:0).opacity(0)
-
+            ScrollView {
+                VStack {
+                    ForEach(spotsService.spots, id: \.id) { spot in
+                        NavigationLink(destination: MySpotView(spot: getSpot(for: spot))) {
+                            MySpotCard(spot: getSpot(for: spot), onSelect: {
+                                self.selectedSpot = spot
+                            })
+                            .background(Color.white)
+                            .cornerRadius(16)
+                            .shadow(color: .separator, radius: 6, x: 0, y: 0)
+                            .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
+                        }
                     }
                 }
-                .hideRowSeparator()
+                .padding([.leading, .trailing], 16)
             }
             .navigationTitle("My Spots")
             .toolbar {
@@ -58,14 +48,22 @@ struct SpotsView: View {
         }
         .sheet(isPresented: $addNewItemIsPresented) {
             AddSpotView { spot in
-                spotsService.add(spot: spot)
+                spotsService.spots.append(spot)
             }
         }
+    }
+    
+    private func getSpot(for spot: Spot) -> Binding<Spot> {
+        guard let index = spotsService.spots.firstIndex(where: { $0.id == spot.id } ) else {
+            fatalError("No spot")
+        }
+        
+        return $spotsService.spots[index]
     }
 }
 
 struct SpotsView_Previews: PreviewProvider {
     static var previews: some View {
-        SpotsView(spotsService: SpotsService())
+        SpotsView()
     }
 }

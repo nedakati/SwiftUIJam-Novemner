@@ -8,12 +8,16 @@
 import SwiftUI
 import Combine
 
-final class SpotsService {
+final class SpotsService: ObservableObject {
 
-    @ObservedObject var spots = SpotsModel()
+    @Published var spots: [Spot] = []
     
-    func add(spot: Spot) {
-        spots.spots.append(spot)
+    init() {
+        spots = [Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing"),
+                 Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "2", instuctions: "Nothing")]
     }
     
+    func add(spot: Spot) {
+        spots.append(spot)
+    }
 }

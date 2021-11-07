@@ -17,7 +17,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Hunt", systemImage: "house")
                 }
-            SpotsView(spotsService: spotsService)
+            SpotsView()
                 .tabItem {
                     Label("Spots", systemImage: "list.dash")
                 }

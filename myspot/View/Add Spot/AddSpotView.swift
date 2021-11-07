@@ -67,12 +67,13 @@ struct AddSpotView: View {
                     Button("Save", action: {
                         saveNewSpot()
                     })
-                        .buttonStyle(AccentButtonStyle())
-                        .padding()
-                        .frame(
-                            minWidth: 0,
-                            maxWidth: .infinity
-                        )
+                    .buttonStyle(AccentButtonStyle())
+                    .padding()
+                    .frame(
+                        minWidth: 0,
+                        maxWidth: .infinity
+                    )
+                    .disabled(!dataIsFilled())
                 }
                 .padding()
                 
@@ -94,6 +95,10 @@ struct AddSpotView: View {
     }
     
     // MARK: - Private methods
+    
+    private func dataIsFilled() -> Bool {
+        return !address.isEmpty && !number.isEmpty && !instructions.isEmpty
+    }
     
     private func saveNewSpot() {
         let spot = Spot(address: address,
