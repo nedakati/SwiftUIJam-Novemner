@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// HELP: https://betterprogramming.pub/creating-confetti-particle-effects-using-swiftui-afda4240de6b
+
 struct FireworkGeometryEffect: GeometryEffect {
     
     var speed: Double = Double.random(in: 20...200)
