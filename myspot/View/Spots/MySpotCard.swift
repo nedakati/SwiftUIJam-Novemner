@@ -58,7 +58,7 @@ struct MySpotCard: View {
                         maxWidth: .infinity
                     )
                 .sheet(isPresented: $openTimeRangePicker) {
-                    MakeSpotAvailable(spot: $spot)
+                    MakeSpotAvailable(spot: $spot, isPresented: $openTimeRangePicker)
                 }
             } else {
                 Button("Cancel Published Spot", action: {
@@ -70,9 +70,6 @@ struct MySpotCard: View {
                         minWidth: 0,
                         maxWidth: .infinity
                     )
-                .sheet(isPresented: $openTimeRangePicker) {
-                    MakeSpotAvailable(spot: $spot)
-                }
             }
         }
         .padding()

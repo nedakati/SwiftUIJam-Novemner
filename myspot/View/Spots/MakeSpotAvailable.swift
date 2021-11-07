@@ -12,6 +12,7 @@ struct MakeSpotAvailable: View {
     @Environment(\.presentationMode) var presentationMode
     
     @Binding var spot: Spot
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -38,8 +39,7 @@ struct MakeSpotAvailable: View {
             
             Button("Confirm", action: {
                 spot.isPublished = true
-//                spot.availability.append(SpotAvailability(startDate: <#T##Date#>, endDate: <#T##Date#>))
-                presentationMode.wrappedValue.dismiss()
+                isPresented = false
             })
                 .buttonStyle(AccentButtonStyle())
                 .padding()
