@@ -18,6 +18,7 @@
 		A99086532736E34D0059FC53 /* AddSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99086522736E34D0059FC53 /* AddSpotView.swift */; };
 		A99086552736EA8B0059FC53 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99086542736EA8B0059FC53 /* LocationManager.swift */; };
 		A99086572736F17F0059FC53 /* AddSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99086562736F17F0059FC53 /* AddSpotViewController.swift */; };
+		A9908659273704200059FC53 /* SpotsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9908658273704200059FC53 /* SpotsService.swift */; };
 		A9A008B62735993500247F58 /* MySpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A008B52735993500247F58 /* MySpotApp.swift */; };
 		A9A008B82735993500247F58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A008B72735993500247F58 /* ContentView.swift */; };
 		A9A008BA2735993A00247F58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A008B92735993A00247F58 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		A99086522736E34D0059FC53 /* AddSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpotView.swift; sourceTree = "<group>"; };
 		A99086542736EA8B0059FC53 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A99086562736F17F0059FC53 /* AddSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpotViewController.swift; sourceTree = "<group>"; };
+		A9908658273704200059FC53 /* SpotsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsService.swift; sourceTree = "<group>"; };
 		A9A008B22735993500247F58 /* MySpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A008B52735993500247F58 /* MySpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotApp.swift; sourceTree = "<group>"; };
 		A9A008B72735993500247F58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				F9368695273672CB00203301 /* SpotSearchService.swift */,
+				A9908658273704200059FC53 /* SpotsService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				A9908643273695C70059FC53 /* MapAnnotationView.swift in Sources */,
 				A9A008B62735993500247F58 /* MySpotApp.swift in Sources */,
 				F936867A2735A74C00203301 /* HomeView.swift in Sources */,
+				A9908659273704200059FC53 /* SpotsService.swift in Sources */,
 				A9787CD52735C84800649850 /* ListRowSeparator.swift in Sources */,
 				F936867C2735A75500203301 /* SpotsView.swift in Sources */,
 				F93686932735EF3700203301 /* FindSpotMapViewController.swift in Sources */,

@@ -49,7 +49,7 @@ struct ReserveView: View {
 struct ReserveView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let spot = Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing", availability: [])
+        let spot = Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing")
         return ReserveView(spot: spot)
     }
 }

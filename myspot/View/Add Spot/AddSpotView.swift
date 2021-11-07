@@ -19,6 +19,12 @@ struct AddSpotView: View {
     @State private var instructions: String = ""
     @State private var coordinates: Coordinates = Coordinates(latitude: 0, longitude: 0)
     
+    private let onSpotCreated: ((Spot) -> Void)?
+
+    init(onSpotCreated: ((Spot) -> Void)?) {
+        self.onSpotCreated = onSpotCreated
+    }
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 24) {
@@ -56,7 +62,7 @@ struct AddSpotView: View {
                 Spacer()
 
                 Button("Save", action: {
-    //                saveChanges()
+                    saveNewSpot()
                 })
                     .buttonStyle(AccentButtonStyle())
                     .padding()
@@ -79,10 +85,22 @@ struct AddSpotView: View {
         }
     }
     
+    // MARK: - Private methods
+    
+    private func saveNewSpot() {
+        let spot = Spot(address: address,
+                        coordinates: coordinates,
+                        number: number,
+                        instuctions: instructions)
+        onSpotCreated?(spot)
+        
+        
+        presentationMode.wrappedValue.dismiss()
+    }
 }
 
 struct AddSpotView_Previews: PreviewProvider {
     static var previews: some View {
-        AddSpotView()
+        AddSpotView(onSpotCreated: nil)
     }
 }

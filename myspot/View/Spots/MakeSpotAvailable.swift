@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MakeSpotAvailable: View {
+
     @Environment(\.presentationMode) var presentationMode
     
     @Binding var spot: Spot
@@ -52,6 +53,6 @@ struct MakeSpotAvailable: View {
 
 struct MakeSpotAvailable_Previews: PreviewProvider {
     static var previews: some View {
-        ReserveView(spot: Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing", availability: []))
+        ReserveView(spot: Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing"))
     }
 }

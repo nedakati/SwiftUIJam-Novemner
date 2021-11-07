@@ -9,13 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
 
+    var spotsService = SpotsService()
+    
     var body: some View {
         TabView {
             HomeView()
                 .tabItem {
                     Label("Hunt", systemImage: "house")
                 }
-            SpotsView()
+            SpotsView(spotsService: spotsService)
                 .tabItem {
                     Label("Spots", systemImage: "list.dash")
                 }

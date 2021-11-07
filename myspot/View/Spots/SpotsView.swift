@@ -10,8 +10,14 @@ import CoreLocation
 
 struct SpotsView: View {
     
-    @State var spots: [Spot] = [Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing", availability: []),
-                                Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "2", instuctions: "Nothing", availability: [])]
+    @State var spots: [Spot]
+    
+    private var spotsService: SpotsService
+    
+    init(spotsService: SpotsService) {
+        self.spotsService = spotsService
+        self._spots = State(initialValue: spotsService.spots.spots)
+    }
     
     @State private var selectedSpot: Spot?
     @State private var addNewItemIsPresented: Bool = false
@@ -51,13 +57,15 @@ struct SpotsView: View {
             }
         }
         .sheet(isPresented: $addNewItemIsPresented) {
-            AddSpotView()
+            AddSpotView { spot in
+                spotsService.add(spot: spot)
+            }
         }
     }
 }
 
 struct SpotsView_Previews: PreviewProvider {
     static var previews: some View {
-        SpotsView()
+        SpotsView(spotsService: SpotsService())
     }
 }
