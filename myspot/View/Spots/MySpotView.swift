@@ -95,6 +95,6 @@ struct MySpotView: View {
 
 struct MySpot_Previews: PreviewProvider {
     static var previews: some View {
-        MySpotView(spot: .constant(Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing", availability: [])))
+        MySpotView(spot: .constant(Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing")))
     }
 }

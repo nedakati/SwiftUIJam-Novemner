@@ -19,53 +19,68 @@ struct AddSpotView: View {
     @State private var instructions: String = ""
     @State private var coordinates: Coordinates = Coordinates(latitude: 0, longitude: 0)
     
+    @State private var showCongratulationView: Bool = false
+    
+    private let onSpotCreated: ((Spot) -> Void)?
+
+    init(onSpotCreated: ((Spot) -> Void)?) {
+        self.onSpotCreated = onSpotCreated
+    }
+    
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 24) {
-                AddSpotMap(onLocationSelected: { location in
-                    self.address = location.address
-                    self.coordinates = location.coordinte
-                })
-                    .cornerRadius(16)
-                    .frame(height: 200)
-                
-                VStack(alignment: .leading, spacing:4) {
-                    Text("Change address")
-                        .font(.callout)
-                        .foregroundColor(.gray)
-                    TextField("Address", text: $address)
-                        .underlineTextField()
-                }
-                
-                VStack(alignment: .leading, spacing:4) {
-                    Text("Change parking space number")
-                        .font(.callout)
-                        .foregroundColor(.gray)
-                    TextField("Number", text: $number)
-                        .underlineTextField()
-                }
-                
-                VStack(alignment: .leading, spacing:4) {
-                    Text("Change instrunctions")
-                        .font(.callout)
-                        .foregroundColor(.gray)
-                    TextField("Instructions", text: $instructions)
-                        .underlineTextField()
-                }
-                
-                Spacer()
+            ZStack {
+                VStack(alignment: .leading, spacing: 24) {
+                    AddSpotMap(onLocationSelected: { location in
+                        self.address = location.address
+                        self.coordinates = location.coordinte
+                    })
+                        .cornerRadius(16)
+                        .frame(height: 200)
+                    
+                    VStack(alignment: .leading, spacing:4) {
+                        Text("Change address")
+                            .font(.callout)
+                            .foregroundColor(.gray)
+                        TextField("Address", text: $address)
+                            .underlineTextField()
+                    }
+                    
+                    VStack(alignment: .leading, spacing:4) {
+                        Text("Change parking space number")
+                            .font(.callout)
+                            .foregroundColor(.gray)
+                        TextField("Number", text: $number)
+                            .underlineTextField()
+                    }
+                    
+                    VStack(alignment: .leading, spacing:4) {
+                        Text("Change instrunctions")
+                            .font(.callout)
+                            .foregroundColor(.gray)
+                        TextField("Instructions", text: $instructions)
+                            .underlineTextField()
+                    }
+                    
+                    Spacer()
 
-                Button("Save", action: {
-    //                saveChanges()
-                })
+                    Button("Save", action: {
+                        saveNewSpot()
+                    })
                     .buttonStyle(AccentButtonStyle())
                     .padding()
                     .frame(
                         minWidth: 0,
                         maxWidth: .infinity
                     )
+                    .disabled(!dataIsFilled())
+                }
+                .padding()
+                
+                CongratulationView(showPopup: $showCongratulationView) {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
             }
-            .padding()
             .navigationTitle("Add new spot")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -79,10 +94,25 @@ struct AddSpotView: View {
         }
     }
     
+    // MARK: - Private methods
+    
+    private func dataIsFilled() -> Bool {
+        return !address.isEmpty && !number.isEmpty && !instructions.isEmpty
+    }
+    
+    private func saveNewSpot() {
+        let spot = Spot(address: address,
+                        coordinates: coordinates,
+                        number: number,
+                        instuctions: instructions)
+        onSpotCreated?(spot)
+        
+        showCongratulationView = true
+    }
 }
 
 struct AddSpotView_Previews: PreviewProvider {
     static var previews: some View {
-        AddSpotView()
+        AddSpotView(onSpotCreated: nil)
     }
 }

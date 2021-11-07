@@ -58,7 +58,7 @@ struct MySpotCard: View {
                         maxWidth: .infinity
                     )
                 .sheet(isPresented: $openTimeRangePicker) {
-                    MakeSpotAvailable(spot: $spot)
+                    MakeSpotAvailable(spot: $spot, isPresented: $openTimeRangePicker)
                 }
             } else {
                 Button("Cancel Published Spot", action: {
@@ -70,9 +70,6 @@ struct MySpotCard: View {
                         minWidth: 0,
                         maxWidth: .infinity
                     )
-                .sheet(isPresented: $openTimeRangePicker) {
-                    MakeSpotAvailable(spot: $spot)
-                }
             }
         }
         .padding()
@@ -84,6 +81,6 @@ struct MySpotCard: View {
 
 struct MySpotCard_Previews: PreviewProvider {
     static var previews: some View {
-        MySpotCard(spot: .constant(Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing", availability: [])), onSelect: { })
+        MySpotCard(spot: .constant(Spot(address: "Location", coordinates: Coordinates(latitude: 51.507222, longitude: -0.1275), number: "1", instuctions: "Nothing")), onSelect: { })
     }
 }

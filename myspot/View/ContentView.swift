@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
 
+    var spotsService = SpotsService()
+    
     var body: some View {
         TabView {
             HomeView()

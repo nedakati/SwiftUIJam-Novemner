@@ -18,12 +18,24 @@ struct Coordinates: Codable {
     var longitude: Double
 }
 
-struct Spot: Codable, Identifiable {
+struct Spot: Identifiable, Codable {
     var id = UUID()
+    
     var address: String
     var coordinates: Coordinates
     var number: String
     var instuctions: String
-    let availability: [SpotAvailability]
+    var availability: [SpotAvailability]
     var isPublished: Bool = false
+    
+    init(address: String,
+         coordinates: Coordinates,
+         number: String,
+         instuctions: String) {
+        self.address = address
+        self.coordinates = coordinates
+        self.number = number
+        self.instuctions = instuctions
+        self.availability = []
+    }
 }
